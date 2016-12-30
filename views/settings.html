@@ -1,0 +1,88 @@
+{% extends 'layout.html' %}
+{% block content %}
+<ul class="nav nav-tabs" role="tablist">
+  <li class="nav-item">
+    <a class="nav-link active" data-toggle="tab" href="#site" role="tab">사이트</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" data-toggle="tab" href="#wiki" role="tab">위키</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" data-toggle="tab" href="#discuss" role="tab">토론</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" data-toggle="tab" href="#experiments" role="tab">설정</a>
+  </li>
+</ul>
+<div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="site">
+        <fieldset class="form-group">
+            <legend>사이드바</legend>
+            <div class="form-check">
+                <label class="form-check-label">
+                    <input type="checkbox" class="form-check-input" data-setting-name="disable_sidebar">
+                    <strong>사이트바 비활성</strong> 최근변경 등이 표시되는 사이드바를 숨깁니다.
+                </label>
+            </div>
+            <div class="form-check">
+                <label class="form-check-label">
+                    <input type="checkbox" class="form-check-input" data-setting-name="align_sidebar_left">
+                    <strong>사이트바 좌측배치</strong> 사이드바를 왼쪽에 배치합니다.
+                </label>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>글꼴</legend>
+            <div class="form-group">
+                <label for="site_font">글꼴</label>
+                <select class="form-control" id="site_font" data-setting-name="forced_font_family">
+                    <option value="___disabled">사용하지 않음</option>
+                    <option value="___sans_serif">브라우저 고딕체 기본값 (sans-serif)</option>
+                    <option value="___serif">브라우저 명조체 기본값 (serif)</option>
+                    <option value="Apple SD Gothic Neo">애플 SD 산돌고딕 네오</option>
+                    <option value="Noto Sans CJK KR">Noto Sans CJK KR</option>
+                    <option value="KoPubDotum Medium">KoPub돋움체 Medium</option>
+                    <option value="NanumGothic">나눔고딕</option>
+                    <option value="NanumBarunGothic">나눔바른고딕</option>
+                    <option value="Malgun Gothic">맑은고딕</option>
+                    <option value="Dotum">돋움</option>
+                </select>
+            </div>
+        </fieldset>
+    </div>
+    <div role="tabpanel" class="tab-pane" id="wiki">
+        <fieldset class="form-group">
+            <legend>문서</legend>
+            <div class="form-check">
+                <label class="form-check-label">
+                    <input type="checkbox" class="form-check-input" data-setting-name="disable_sidebar">
+                    <strong>사이트바 비활성</strong> 최근변경 등이 표시되는 사이드바를 숨깁니다.
+                </label>
+            </div>
+            <div class="form-check">
+                <label class="form-check-label">
+                    <input type="checkbox" class="form-check-input" data-setting-name="align_sidebar_left">
+                    <strong>사이트바 좌측배치</strong> 사이드바를 왼쪽에 배치합니다.
+                </label>
+            </div>
+        </fieldset>
+    </div>
+    <div role="tabpanel" class="tab-pane" id="discuss">
+        C
+    </div>
+    <div role="tabpanel" class="tab-pane" id="experiments">
+        D
+    </div>
+</div>
+<br>
+<button class="btn btn-primary" type="button" >저장</button>
+    <!-- TODO
+            - Site tab
+                - 사이드바 비활성, 사이드바 좌측 배치, 글꼴
+            - Wiki tab
+                - 취소선 표시, 내용과 링크가 다른 링크 펼치기, 각주 표지 형식, 이미지
+            - Discuss tab
+                - 취소선 표시, 굵음 표시
+                - Extra : Colored nicks
+    -->
+{% endblock %}
