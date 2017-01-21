@@ -56,3 +56,20 @@
 .res.res-type-status .r-body {
 	background: darkorange;
 }
+
+.r-head.first-author {
+    background: #C4D7F5;
+}
+
+.r-head, .r-body {
+    border: 1px solid gainsboro;
+}
+
+.r-body {
+    padding-bottom: 0;
+}
+
+#createBtn {
+    float: right;
+    margin-top: 10px;
+}
