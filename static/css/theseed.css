@@ -39,6 +39,10 @@
 	color: white;
 }
 
+.Liberty .content-wrapper .liberty-content {
+    margin-top: -20px;
+}
+
 .r-body {
 	background: whitesmoke;
 	padding: 10px;
