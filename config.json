@@ -15,7 +15,8 @@
 		"js/live_Recents.js",
 		"js/layout.js",
 		"js/theseed.js",
-		"js/settings.js"
+		"js/settings.js",
+		"js/tempsave.js"
 	],
 	"auto_js_targets": {
 		"*": [
@@ -36,6 +37,16 @@
 			},
 			{
 				"path": "js/settings.js"
+			}
+		],
+		"edit": [
+			{
+				"path": "js/tempsave.js"
+			}
+		],
+		"settings": [
+			{
+				"path": "js/tempsave.js"
 			}
 		]
 	},
