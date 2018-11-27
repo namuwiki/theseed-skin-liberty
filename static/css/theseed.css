@@ -238,3 +238,7 @@ div.scroll-buttons {
     max-width: 100%;
     overflow-x: auto;
 }
+
+.footer-info-copyright {
+    margin-top: 20px;
+}
