@@ -85,10 +85,9 @@ s:hover, strike:hover, del:hover{
 }
 
 .wiki-article div.wiki-category {
-    border: 1px solid #e1e8ed;
+    border: 1px solid #aaa;
     padding: 0.4rem;
     padding-left: 1rem;
-    box-shadow: 0.15rem 0.15rem 0 0 #cfdae2;
     border-radius: 0.35rem;
     display: inline-block;
     width: 100%;
@@ -213,4 +212,29 @@ div.scroll-buttons {
 
 .res-loading[data-visible="true"] .res {
     animation: loading-res-animation 1s infinite;
+}
+
+.search-item {
+    border-top: 1px solid #eee;
+    padding: 10px;
+}
+
+.search-item h4 {
+    margin-bottom: 10px;
+}
+
+.breadcrumb.link-nav {
+    margin-left: 0 !important;
+    margin-bottom: 10px !important;
+    border: 1px solid #aaa;
+    display: inline-block;
+    background: transparent;
+}
+
+.r-body {
+    word-wrap: break-word;
+    max-height: 500px;
+    overflow-y: auto;
+    max-width: 100%;
+    overflow-x: auto;
 }
