@@ -695,3 +695,7 @@ div.scroll-buttons {
 .navbar-fixed-top {
     position: absolute;
 }
+
+caption {
+    text-align: center;
+}
