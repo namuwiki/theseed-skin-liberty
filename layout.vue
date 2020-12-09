@@ -847,7 +847,7 @@ Public License instead of this License.  But first, please read
                 <option value="Batang">바탕</option>
                 <option value="custom">직접 입력</option>
             </setting-item-select>
-            <input id=customFont class=form-control v-if="$store.state.localConfig['liberty.customFonts'] == 'custom'" />
+            <input id=liberty.customFonts2 class=form-control v-if="$store.state.localConfig['liberty.customFonts'] == 'custom'" />
             
             <setting-item-select
                 label="고정폭"
@@ -866,7 +866,7 @@ Public License instead of this License.  But first, please read
     
     <style v-if="$store.state.localConfig['liberty.customFonts'] != 'none'">
         body {
-            font-family: "{{ $store.state.localConfig['liberty.customFonts'] }}" !important;
+            font-family: "{{ $store.state.localConfig['liberty.customFonts'] || $store.state.localConfig['liberty.customFonts2'] }}" !important;
         }
     </style>
     
