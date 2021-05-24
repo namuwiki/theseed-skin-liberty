@@ -833,8 +833,48 @@ Public License instead of this License.  But first, please read
             <nuxt-link class="scroll-button" to="#top" id="left"><i class="fa fa-arrow-up" aria-hidden="true"></i></nuxt-link>
             <nuxt-link class="scroll-bottom" to="#bottom" id="right"><i class="fa fa-arrow-down" aria-hidden="true"></i></nuxt-link>
         </div>
-        <setting />
+        <setting>
+            <setting-item-select
+                label="사용자 지정 글꼴"
+                ckey="liberty.customFonts"
+                default="none"
+            >
+                <option value="none">(없음)</option>
+                <option value="Malgun Gothic">맑은 고딕</option>
+                <option value="NanumGothic">나눔고딕</option>
+                <option value="Gulim">굴림</option>
+                <option value="Dotum">돋움</option>
+                <option value="Batang">바탕</option>
+                <option value="custom">직접 입력</option>
+            </setting-item-select>
+            <input id=liberty.customFonts2 class=form-control v-if="$store.state.localConfig['liberty.customFonts'] == 'custom'" />
+            
+            <setting-item-select
+                label="고정폭"
+                ckey="liberty.fixedWidth"
+                default="1200px"
+            >
+                <option value="1200px">1200픽셀</option>
+                <option value="1300px">1300픽셀</option>
+                <option value="1400px">1400픽셀</option>
+                <option value="1500px">1500픽셀</option>
+                <option value="1600px">1600픽셀</option>
+                <option value="initial">고정폭 없음</option>
+            </setting-item-select>
+        </setting>
     </div>
+    
+    <style v-if="$store.state.localConfig['liberty.customFonts'] != 'none'">
+        body {
+            font-family: "{{ $store.state.localConfig['liberty.customFonts'] || $store.state.localConfig['liberty.customFonts2'] }}" !important;
+        }
+    </style>
+    
+    <style>
+        .Liberty .content-wrapper, .Liberty .nav-wrapper .navbar {
+            max-width: {{ $store.state.localConfig['liberty.fixedWidth'] }} !important;
+        }
+    </style>
 </template>
 
 <style>
